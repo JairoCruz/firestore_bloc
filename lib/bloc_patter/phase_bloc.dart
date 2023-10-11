@@ -7,7 +7,6 @@ import 'package:firestore_bloc_1/bloc_patter/phase_event.dart';
 import 'package:firestore_bloc_1/bloc_patter/phase_state.dart';
 import 'package:firestore_bloc_1/repository/firestore_repository.dart';
 
-import '../model/phase.dart';
 
 class PhaseBloc extends Bloc<PhaseEvent, PhaseState> {
 

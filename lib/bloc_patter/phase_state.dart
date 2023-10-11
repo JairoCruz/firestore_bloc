@@ -1,6 +1,5 @@
 
 import 'package:equatable/equatable.dart';
-
 import '../model/phase.dart';
 
 enum PhaseStatus { initial, success, failure }

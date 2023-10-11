@@ -26,21 +26,6 @@ factory Phase.fromFirestore(
       );
   }
 
-
- /*  Phase({
-    this.title,
-    this.description
-  });
-
-  
-
-  Map<String, dynamic> toFirestore() {
-    return {
-      if (title != null) "title": title,
-      if (description != null) "description": description, 
-    };
-  } */
-
    Map<String, dynamic> toFirestore() {
     return {
       if (title != null) "title": title,
