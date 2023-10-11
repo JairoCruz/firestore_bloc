@@ -1,0 +1,24 @@
+name: firestore_bloc_1
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  bloc: ^8.0.0
+  flutter_bloc: ^8.0.0
+  cloud_firestore: ^4.7.1
+  firebase_core: ^2.13.0
+  flutter:
+    sdk: flutter
+  equatable: ^2.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true

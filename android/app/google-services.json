@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "239130950442",
+    "firebase_url": "https://notificacioncalenelectoral.firebaseio.com",
+    "project_id": "notificacioncalenelectoral",
+    "storage_bucket": "notificacioncalenelectoral.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239130950442:android:3d8442eeb964d55e577c53",
+        "android_client_info": {
+          "package_name": "com.example.calendario_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239130950442-7gt0ufn9n7cgqe7vopt7svnropbgic21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.calendario_app",
+            "certificate_hash": "eada423f60f1dd90dc7b173cacfde97579887982"
+          }
+        },
+        {
+          "client_id": "239130950442-jrq4d6vt9d6d5ep41nf8veo6ir7cbect.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.calendario_app",
+            "certificate_hash": "bafb6170051ddaa18ebe8762ed0f28f03ef09c0b"
+          }
+        },
+        {
+          "client_id": "239130950442-ivsqddq94mbe081loantlehshfrur416.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCe09q0RZ4hn-gZKQqOqd1gQVb-JJKaJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239130950442-ivsqddq94mbe081loantlehshfrur416.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239130950442-b5go355jli2neumaq23d7ihcvr7a64b2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.calendarioApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239130950442:android:267a6f849b7012d3577c53",
+        "android_client_info": {
+          "package_name": "com.example.firestore_bloc_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239130950442-ivsqddq94mbe081loantlehshfrur416.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCe09q0RZ4hn-gZKQqOqd1gQVb-JJKaJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239130950442-ivsqddq94mbe081loantlehshfrur416.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239130950442-b5go355jli2neumaq23d7ihcvr7a64b2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.calendarioApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239130950442:android:759bb85eec9e1625",
+        "android_client_info": {
+          "package_name": "com.tse.notificacioncalendarioelectoral"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239130950442-bg138cpik7tkcbjfk7rudkc3jho7ag9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tse.notificacioncalendarioelectoral",
+            "certificate_hash": "035efc1a07e09caf7f544e2406e14fd26f5be759"
+          }
+        },
+        {
+          "client_id": "239130950442-ivsqddq94mbe081loantlehshfrur416.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCe09q0RZ4hn-gZKQqOqd1gQVb-JJKaJg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239130950442-ivsqddq94mbe081loantlehshfrur416.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239130950442-b5go355jli2neumaq23d7ihcvr7a64b2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.calendarioApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
