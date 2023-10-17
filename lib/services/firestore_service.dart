@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import '../model/phase.dart';
 
 class FirestoreService {
@@ -17,5 +16,22 @@ class FirestoreService {
             .docs.map((docSnapshot) => Phase.fromFirestore(docSnapshot, null))
             .toList();
   }
+
+
+  // Get Activities from phases
+  Future<void> getActivitiesByPhase(int idDocument) async {
+    QuerySnapshot<Map<String, dynamic>> snapshot = await db
+      .collection('calendario_2023')
+      .doc('local')
+      .collection('activities')
+      .where('phase_id', isEqualTo: idDocument)
+      .get();
+
+      print(snapshot.size);
+
+      // return snapshot
+      //   .docs.map((docSnapshot) => )
+  }
+
 }
 

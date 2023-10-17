@@ -11,12 +11,12 @@ class PhaseList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Fases')),
-      body: BlocProvider(
-        create: (_) => PhaseBloc(FirestoreRepository())..add(PhaseFetched()),
-        child: const PhaseListWidget(),
-      ),
-    );
+        appBar: AppBar(title: const Text('Fases')),
+        body: BlocProvider(
+          create: (_) => PhaseBloc(FirestoreRepository())..add(PhaseFetched()),
+          child: const PhaseListWidget(),
+        ),
+      );
   }
 
 }

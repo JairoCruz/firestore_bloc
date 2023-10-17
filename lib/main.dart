@@ -12,6 +12,14 @@ void main() async {
   );
 
   Bloc.observer = const SimpleBlocObserver();
-  runApp(HomeApp());
+  runApp(MaterialApp(
+    title: 'Calendario Electoral 2023-2024',
+    theme: ThemeData(
+      colorScheme: ColorScheme.fromSeed(seedColor:  Colors.deepPurple),
+      useMaterial3: true
+    ),
+    debugShowCheckedModeBanner: false,
+    home: HomeApp()
+    ));
  
 }

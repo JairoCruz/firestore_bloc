@@ -8,9 +8,17 @@ class FirestoreRepository implements DatabaseRepository {
   Future<List<Phase>> getListPhases() {
     return service.getPhases();
   }
+  
+  @override
+  Future<void> getActivitiesByPhase(int idDocument) {
+    return service.getActivitiesByPhase(idDocument);
+  }
+
+
 
 }
 
 abstract class DatabaseRepository {
   Future<List<Phase>> getListPhases();
+  Future<void> getActivitiesByPhase(int idDocument);
 }

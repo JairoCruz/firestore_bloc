@@ -1,7 +1,10 @@
 import 'package:firestore_bloc_1/bloc_patter/phase_bloc.dart';
+import 'package:firestore_bloc_1/bloc_patter/phase_event.dart';
 import 'package:firestore_bloc_1/bloc_patter/phase_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../Activities/activities.dart';
 
 class PhaseListWidget extends StatefulWidget {
   const PhaseListWidget({super.key});
@@ -30,6 +33,15 @@ class _PhaseListState extends State<PhaseListWidget> {
                   title: Text(state.phases[index].title),
                   subtitle: Text(state.phases[index].description),
                   isThreeLine: true,
+                  onTap: () {
+
+                    print("documento id: ${state.phases[index].id}");
+                    context.read<PhaseBloc>().add(ActivityFetched(state.phases[index].id));
+                   /*  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Activities())
+                    ); */
+                  },
                   );
               } , 
               separatorBuilder: (BuildContext context, int index) => const Divider(),

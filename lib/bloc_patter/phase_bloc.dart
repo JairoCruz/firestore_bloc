@@ -15,6 +15,7 @@ class PhaseBloc extends Bloc<PhaseEvent, PhaseState> {
 
   PhaseBloc(this.fr) : super(const PhaseState()) {
     on<PhaseFetched>(_onPhaseFetched);
+    on<ActivityFetched>(_onActivityFetched);
   }
 
 
@@ -28,6 +29,20 @@ class PhaseBloc extends Bloc<PhaseEvent, PhaseState> {
         ));
       }
     } catch (_) {
+      emit(state.copyWith(status: PhaseStatus.failure));
+    }
+  }
+
+  Future<void> _onActivityFetched(ActivityFetched event, Emitter<PhaseState> emit) async {
+    
+    try {
+      if (state.status == PhaseStatus.success) {
+        print('llego');
+        await fr.getActivitiesByPhase(event.idD);
+       
+      } 
+    } catch(_){
+      print('mal');
       emit(state.copyWith(status: PhaseStatus.failure));
     }
   }

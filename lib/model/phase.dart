@@ -4,10 +4,12 @@ import 'package:equatable/equatable.dart';
 final class Phase extends Equatable {
  
  const Phase({
+  required this.id,
   required this.title,
   required this.description,
  });
 
+ final int id;
  final String title;
  final String description;
   
@@ -21,6 +23,7 @@ factory Phase.fromFirestore(
     SnapshotOptions? options) {
       final data = snapshot.data();
       return Phase(
+        id: data?['id'],
         title: data?['title'],
         description: data?['description']
       );
