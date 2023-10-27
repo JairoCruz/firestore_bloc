@@ -13,3 +13,8 @@ final class ActivityFetched extends PhaseEvent {
   final int idD;
   ActivityFetched(this.idD);
 }
+
+final class TxtButtonPhase extends PhaseEvent {
+  final String txtButtonPhase;
+  TxtButtonPhase(this.txtButtonPhase);
+}

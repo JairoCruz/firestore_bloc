@@ -16,6 +16,26 @@ class PhaseBloc extends Bloc<PhaseEvent, PhaseState> {
   PhaseBloc(this.fr) : super(const PhaseState()) {
     on<PhaseFetched>(_onPhaseFetched);
     on<ActivityFetched>(_onActivityFetched);
+    on<TxtButtonPhase>(_onTxtButtonPhase);
+  }
+
+
+  Future<void> _onTxtButtonPhase(TxtButtonPhase event, Emitter<PhaseState> emit) async {
+   print('DEL BOTON: ${event.txtButtonPhase}');
+   
+    try {
+     print('saludo ${state.txtButtonPhase}');
+      return emit(
+        
+        state.copyWith(
+          txtButtonPhase: event.txtButtonPhase,
+        )
+        
+      );
+    }
+    catch (_) {
+      print('hay un error');
+    }
   }
 
 

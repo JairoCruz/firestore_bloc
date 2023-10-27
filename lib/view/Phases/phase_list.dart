@@ -13,11 +13,11 @@ class PhaseList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Calendario Electoral')),
-        body: HomePhase(),
-       /*  body: BlocProvider(
+        //body: HomePhase(),
+        body: BlocProvider(
           create: (_) => PhaseBloc(FirestoreRepository())..add(PhaseFetched()),
-          child: const PhaseListWidget(),
-        ), */
+          child: HomePhase(),
+        ),
       );
   }
 
