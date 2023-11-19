@@ -21,20 +21,19 @@ class PhaseBloc extends Bloc<PhaseEvent, PhaseState> {
 
 
   Future<void> _onTxtButtonPhase(TxtButtonPhase event, Emitter<PhaseState> emit) async {
-   print('DEL BOTON: ${event.txtButtonPhase}');
-   
+  
     try {
-     print('saludo ${state.txtButtonPhase}');
-      return emit(
-        
+     final listActivities = await fr.getActivitiesByPhase(event.idPhase);     
+     return emit(        
         state.copyWith(
+          activities: listActivities,
           txtButtonPhase: event.txtButtonPhase,
-        )
-        
-      );
+          idPhase: event.idPhase
+        )        
+      );     
     }
-    catch (_) {
-      print('hay un error');
+    catch (e) {
+      print('hay un error: ${e.toString()}');
     }
   }
 
@@ -58,7 +57,10 @@ class PhaseBloc extends Bloc<PhaseEvent, PhaseState> {
     try {
       if (state.status == PhaseStatus.success) {
         print('llego');
-        await fr.getActivitiesByPhase(event.idD);
+        final activities = await fr.getActivitiesByPhase(event.idD);
+        return emit(state.copyWith(
+          activities: activities,
+        ));
        
       } 
     } catch(_){

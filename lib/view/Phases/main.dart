@@ -29,7 +29,6 @@ class _HomePhase extends State<HomePhase> {
               child: Text('No hay fases'),
             );
           }
-
           ///
           return Column(
             children: [
@@ -50,7 +49,28 @@ class _HomePhase extends State<HomePhase> {
                     ),
                   )),
                 ],
+              ), 
+              Expanded(
+                child: Container(
+                  child: ListView.separated(
+                    itemBuilder: (BuildContext context, index) {
+                      return ListTile(
+                        title: Text(state.activities[index].activity),
+                      );
+                    },
+                    itemCount: state.activities.length,
+                    separatorBuilder: (BuildContext context, int index) =>
+                    const Divider(),
+                    ),
+                  ) ,
               )
+
+              /* (state.activities.isEmpty) ? 
+              const Text('no hay datos') : 
+              const Text('si hay muchos datos'), */
+
+              
+                          
             ],
           );
         case PhaseStatus.initial:
@@ -58,7 +78,11 @@ class _HomePhase extends State<HomePhase> {
             child: CircularProgressIndicator(),
           );
       }
-    });
+
+      
+
+    }
+    );
   }
 
   Future<void> showDialogPhase(BuildContext context, PhaseState ps) {
@@ -82,7 +106,7 @@ class _HomePhase extends State<HomePhase> {
                     subtitle: Text(ps.phases[index].description),
                     isThreeLine: true,
                     onTap: () {
-                      context.read<PhaseBloc>().add(TxtButtonPhase(ps.phases[index].title));
+                      context.read<PhaseBloc>().add(TxtButtonPhase(ps.phases[index].title, ps.phases[index].id));
                       /* setState(() {
                         greetings = ps.phases[index].title.toString();
                       }); */

@@ -6,17 +6,17 @@ final class Activity extends Equatable {
   final String activity;
   final int dateStart;
   final int dateEnd;
-  final List<String> responsible;
+  //final List<String> responsible;
 
   const Activity({
     required this.activity,
     required this.dateStart,
     required this.dateEnd,
-    required this.responsible
+   // required this.responsible
   });
   
   @override
-  List<Object?> get props => [activity, dateStart, dateEnd, responsible];
+  List<Object?> get props => [activity, dateStart, dateEnd,/* responsible*/];
 
   factory Activity.fromFirestore(
     DocumentSnapshot<Map<String, dynamic>> snapshot,
@@ -24,10 +24,10 @@ final class Activity extends Equatable {
   ){
     final data = snapshot.data();
     return Activity(
-      activity: data?['activity'],
+      activity: data?['activitiy'],
       dateStart: data?['date_start'],
       dateEnd: data?['date_end'],
-      responsible: data?['responsible']
+      //responsible: data?['responsible']
       );
   }
 
