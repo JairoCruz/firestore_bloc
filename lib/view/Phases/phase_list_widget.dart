@@ -31,8 +31,8 @@ class _PhaseListState extends State<PhaseListWidget> {
               itemBuilder: (BuildContext context, int index) {
                 return ListTile(
                   title: Text(state.phases[index].title),
-                  subtitle: Text(state.phases[index].description),
-                  isThreeLine: true,
+                  //subtitle: Text(state.phases[index].description),
+                  //isThreeLine: true,
                   onTap: () {
 
                     print("documento id: ${state.phases[index].id}");

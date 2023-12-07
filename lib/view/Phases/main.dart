@@ -35,11 +35,14 @@ class _HomePhase extends State<HomePhase> {
               Row(
                 children: [
                   Expanded(
-                      child: Directionality(
+                    child: Directionality(
                     textDirection: TextDirection.rtl,
                     child: TextButton.icon(
                       style: TextButton.styleFrom(
-                        textStyle: const TextStyle(fontSize: 18),
+                        shape: const RoundedRectangleBorder(),
+                        fixedSize:const  Size(0.0, 60.0),
+                        alignment: Alignment.center,
+                        textStyle: const TextStyle(fontSize: 16,),
                       ),
                       onPressed: () {
                         showDialogPhase(context, state);
@@ -55,7 +58,7 @@ class _HomePhase extends State<HomePhase> {
                   child: ListView.separated(
                     itemBuilder: (BuildContext context, index) {
                       return ListTile(
-                        title: Text(state.activities[index].activity),
+                        title: Text(state.activities[index].activity, style: const TextStyle(fontSize: 14.0)),
                       );
                     },
                     itemCount: state.activities.length,
@@ -63,13 +66,7 @@ class _HomePhase extends State<HomePhase> {
                     const Divider(),
                     ),
                   ) ,
-              )
-
-              /* (state.activities.isEmpty) ? 
-              const Text('no hay datos') : 
-              const Text('si hay muchos datos'), */
-
-              
+              ) 
                           
             ],
           );
@@ -102,9 +99,9 @@ class _HomePhase extends State<HomePhase> {
               body: ListView.separated(
                 itemBuilder: (BuildContext contextt, int index) {
                   return ListTile(
-                    title: Text(ps.phases[index].title),
-                    subtitle: Text(ps.phases[index].description),
-                    isThreeLine: true,
+                    title: Text(ps.phases[index].title, style: const TextStyle(fontSize: 14.0),),
+                    //subtitle: Text(ps.phases[index].description),
+                   // isThreeLine: true,
                     onTap: () {
                       context.read<PhaseBloc>().add(TxtButtonPhase(ps.phases[index].title, ps.phases[index].id));
                       /* setState(() {
